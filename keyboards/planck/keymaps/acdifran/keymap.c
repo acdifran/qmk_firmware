@@ -98,7 +98,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Adjust (Lower + Raise)
  *                                           v---------------RGB CONTROL---------------v
  * ,-----------------------------------------------------------------------------------.
- * | RGB  |RGBMOD| xxxx | F14  | F15  | xxxx | HUE- | HUE+ | SAT- | SAT+ |BRGTH-|BRGTH+|
+ * | RGB  |RGBMOD| xxxx | F14  | F15  | xxxx | HUE- | HUE+ | SAT- | SAT+ |BRGHT-|BRGHT+|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | xxxx | xxxx | Vol- | Mute | Vol+ |Musoff|Mus on|MIDIof|MIDIon|MUSmod|Audoff|Aud on|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -134,38 +134,38 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Nav
  * ,-----------------------------------------------------------------------------------.
- * | xxxx | xxxx | xxxx | xxxx | M(R) | xxxx | xxxx | xxxx | xxxx | xxxx | M(P) | xxxx |
+ * | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | M(P) | xxxx |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      | M(A) | M(S) | M(D) | M(F) | M(G) | A(H) | A(J) | A(K) | A(L) | M(;) | xxxx |
+ * |      | M(A) | M(S) | M(D) | M(F) | xxxx | A(H) | A(J) | A(K) | A(L) | M(;) | xxxx |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      | xxxx | xxxx | xxxx | xxxx | xxxx | M(N) | xxxx | xxxx | xxxx | M(/) | xxxx |
+ * |      | M(Z) | xxxx | xxxx | xxxx | xxxx | M(N) | M(M) | xxxx | xxxx | M(/) | xxxx |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      | xxxx |     Meh     | xxxx | xxxx |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 [_NAV] = LAYOUT_planck_mit(
-  XXXXXXX, XXXXXXX,   XXXXXXX,   XXXXXXX,   MEH(KC_R), XXXXXXX,   XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    MEH(KC_P),    XXXXXXX,
-  _______, MEH(KC_A), MEH(KC_S), MEH(KC_D), MEH(KC_F), MEH(KC_G), LALT(KC_H), LALT(KC_J), LALT(KC_K), LALT(KC_L), MEH(KC_SCLN), XXXXXXX,
-  _______, XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   MEH(KC_N),  XXXXXXX,    XXXXXXX,    XXXXXXX,    MEH(KC_SLSH), XXXXXXX,
-  _______, _______,   _______,   _______,   XXXXXXX,          KC_MEH,         XXXXXXX,    XXXXXXX,    _______,    _______,      _______
+  XXXXXXX, XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX, XXXXXXX,    MEH(KC_U),  MEH(KC_I),  MEH(KC_O),  MEH(KC_P),    XXXXXXX,
+  _______, MEH(KC_A), MEH(KC_S), MEH(KC_D), MEH(KC_F), XXXXXXX, LALT(KC_H), LALT(KC_J), LALT(KC_K), LALT(KC_L), MEH(KC_SCLN), XXXXXXX,
+  _______, MEH(KC_Z), XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX, MEH(KC_N),  MEH(KC_M),  XXXXXXX,    XXXXXXX,    MEH(KC_SLSH), XXXXXXX,
+  _______, _______,   _______,   _______,   XXXXXXX,          KC_MEH,       XXXXXXX,    XXXXXXX,    _______,    _______,      _______
 ),
 
 /* Term
  * ,-----------------------------------------------------------------------------------.
- * | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx |
+ * | xxxx | xxxx | xxxx |CAG(E)|CAG(R)| xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      | xxxx | xxxx | xxxx | xxxx | xxxx |A(Lft)|A(Dwn)|A(Up) |A(Rgt)| xxxx | xxxx |
+ * |      | xxxx | xxxx |CAG(D)|CAG(F)| xxxx |A(Lft)|A(Dwn)|A(Up) |A(Rgt)| xxxx | xxxx |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx |
+ * |      | xxxx |CAG(X)| xxxx |CAG(V)| xxxx | xxxx |CAG(M)| xxxx | xxxx |CAG(/)| xxxx |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      | xxxx | xxxx |     xxxx    | xxxx |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 [_TERM] = LAYOUT_planck_mit(
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX,       XXXXXXX,     XXXXXXX,       XXXXXXX, XXXXXXX,
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LALT(KC_LEFT), LALT(KC_DOWN), LALT(KC_UP), LALT(KC_RGHT), XXXXXXX, XXXXXXX,
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX,       XXXXXXX,     XXXXXXX,       XXXXXXX, XXXXXXX,
-  _______, _______, _______, XXXXXXX, XXXXXXX,      XXXXXXX,           XXXXXXX,       _______,     _______,       _______, _______
+  XXXXXXX, XXXXXXX, XXXXXXX,    LCAG(KC_E), LCAG(KC_R), XXXXXXX, XXXXXXX,       XXXXXXX,       XXXXXXX,     XXXXXXX,       XXXXXXX,       XXXXXXX,
+  _______, XXXXXXX, XXXXXXX,    LCAG(KC_D), LCAG(KC_F), XXXXXXX, LALT(KC_LEFT), LALT(KC_DOWN), LALT(KC_UP), LALT(KC_RGHT), XXXXXXX,       XXXXXXX,
+  _______, XXXXXXX, LCAG(KC_X), XXXXXXX,    LCAG(KC_V), XXXXXXX, XXXXXXX,       LCAG(KC_M),    XXXXXXX,     XXXXXXX,       LCAG(KC_SLSH), XXXXXXX,
+  _______, _______, _______,    XXXXXXX,    XXXXXXX,      XXXXXXX,              XXXXXXX,       _______,     _______,       _______,       _______
 )
 
 };

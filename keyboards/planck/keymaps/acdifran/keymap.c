@@ -168,7 +168,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, XXXXXXX, XXXXXXX,    LCAG(KC_D), LCAG(KC_F), XXXXXXX, LALT(KC_LEFT), LALT(KC_DOWN), LALT(KC_UP), LALT(KC_RGHT), XXXXXXX,       XXXXXXX,
   _______, XXXXXXX, LCAG(KC_X), XXXXXXX,    LCAG(KC_V), XXXXXXX, XXXXXXX,       LCAG(KC_M),    XXXXXXX,     XXXXXXX,       LCAG(KC_SLSH), XXXXXXX,
   _______, _______, _______,    XXXXXXX,    XXXXXXX,      XXXXXXX,              XXXXXXX,       _______,     _______,       _______,       _______
-)
+),
 
 /* FN
  * ,-----------------------------------------------------------------------------------.

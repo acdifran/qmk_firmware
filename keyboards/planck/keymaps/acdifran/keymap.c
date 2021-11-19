@@ -128,10 +128,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_SPACEFN] = LAYOUT_planck_mit(
-  LCTL(KC_TAB),    LCAG(1), LCAG(2), LCAG(3), LCAG(4),  XXXXXXX,      LALT(KC_LEFT), KC_PGDN, KC_PGUP, LALT(KC_RGHT), XXXXXXX,      KC_DEL,
-  _______,         LCAG(5), LCAG(6), LCAG(7), LCAG(8),  LALT(KC_TAB), KC_LEFT,       KC_DOWN, KC_UP,   KC_RGHT,       LGUI(KC_TAB), XXXXXXX,
-  LSFT_T(KC_CAPS), LCAG(9), LCAG(0), XXXXXXX, XXXXXXX,  LALT(KC_GRV), KC_HOME,       XXXXXXX, XXXXXXX, KC_END,        LGUI(KC_GRV), _______,
-  _______,         _______, _______, XXXXXXX, XXXXXXX,          _______,             XXXXXXX, XXXXXXX, _______,       _______,      _______
+  LCTL(KC_TAB),    LCAG(KC_1), LCAG(KC_2), LCAG(KC_3), LCAG(KC_4),  XXXXXXX,      LALT(KC_LEFT), KC_PGDN, KC_PGUP, LALT(KC_RGHT), XXXXXXX,      KC_DEL,
+  _______,         LCAG(KC_5), LCAG(KC_6), LCAG(KC_7), LCAG(KC_8),  LALT(KC_TAB), KC_LEFT,       KC_DOWN, KC_UP,   KC_RGHT,       LGUI(KC_TAB), XXXXXXX,
+  LSFT_T(KC_CAPS), LCAG(KC_9), LCAG(KC_0), XXXXXXX,    XXXXXXX,     LALT(KC_GRV), KC_HOME,       XXXXXXX, XXXXXXX, KC_END,        LGUI(KC_GRV), _______,
+  _______,         _______,    _______,    XXXXXXX,    XXXXXXX,          _______,                XXXXXXX, XXXXXXX, _______,       _______,      _______
 ),
 
 /* Nav

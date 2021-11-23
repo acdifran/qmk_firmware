@@ -118,25 +118,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* SpaceFn
  * ,-----------------------------------------------------------------------------------.
- * |C(Tab)|CAG(1)|CAG(2)|CAG(3)|CAG(4)| xxxx |A(<-) | PgDn | PgUp |A(->) | xxxx | Del  |
+ * |C(Tab)|CAG(1)|CAG(2)|CAG(3)| xxxx | xxxx |A(<-) | PgDn | PgUp |A(->) | xxxx | Del  |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |CAG(5)|CAG(6)|CAG(7)|CAG(8)|A(Tab)| Left | Down |  Up  |Right |G(Tab)| xxxx |
+ * |      |CAG(4)|CAG(5)|CAG(6)|CAG(0)|A(Tab)| Left | Down |  Up  |Right |G(Tab)| xxxx |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |S/Caps|CAG(9)|CAG(0)| xxxx | xxxx |A(Grv)| Home | xxxx | xxxx | End  |G(Grv)|      |
+ * |S/Caps|CAG(7)|CAG(8)|CAG(9)| xxxx |A(Grv)| Home | xxxx | xxxx | End  |G(Grv)|      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      | xxxx | xxxx |             | xxxx | xxxx |      |      | xxxx |
  * `-----------------------------------------------------------------------------------'
  */
 [_SPACEFN] = LAYOUT_planck_mit(
-  LCTL(KC_TAB),    LCAG(KC_1), LCAG(KC_2), LCAG(KC_3), LCAG(KC_4),  XXXXXXX,      LALT(KC_LEFT), KC_PGDN, KC_PGUP, LALT(KC_RGHT), XXXXXXX,      KC_DEL,
-  _______,         LCAG(KC_5), LCAG(KC_6), LCAG(KC_7), LCAG(KC_8),  LALT(KC_TAB), KC_LEFT,       KC_DOWN, KC_UP,   KC_RGHT,       LGUI(KC_TAB), XXXXXXX,
-  LSFT_T(KC_CAPS), LCAG(KC_9), LCAG(KC_0), XXXXXXX,    XXXXXXX,     LALT(KC_GRV), KC_HOME,       XXXXXXX, XXXXXXX, KC_END,        LGUI(KC_GRV), _______,
+  LCTL(KC_TAB),    LCAG(KC_1), LCAG(KC_2), LCAG(KC_3), XXXXXXX,     XXXXXXX,      LALT(KC_LEFT), KC_PGDN, KC_PGUP, LALT(KC_RGHT), XXXXXXX,      KC_DEL,
+  _______,         LCAG(KC_4), LCAG(KC_5), LCAG(KC_6), LCAG(KC_0),  LALT(KC_TAB), KC_LEFT,       KC_DOWN, KC_UP,   KC_RGHT,       LGUI(KC_TAB), XXXXXXX,
+  LSFT_T(KC_CAPS), LCAG(KC_7), LCAG(KC_8), LCAG(KC_9), XXXXXXX,     LALT(KC_GRV), KC_HOME,       XXXXXXX, XXXXXXX, KC_END,        LGUI(KC_GRV), _______,
   _______,         _______,    _______,    XXXXXXX,    XXXXXXX,          _______,                XXXXXXX, XXXXXXX, _______,       _______,      _______
 ),
 
 /* Nav
  * ,-----------------------------------------------------------------------------------.
- * | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | M(P) | xxxx |
+ * | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | M(U) | M(I) | M(0) | M(P) | xxxx |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      | M(A) | M(S) | M(D) | M(F) | xxxx | A(H) | A(J) | A(K) | A(L) | M(;) | xxxx |
  * |------+------+------+------+------+------+------+------+------+------+------+------|

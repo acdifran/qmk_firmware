@@ -140,16 +140,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      | M(A) | M(S) | M(D) | M(F) | xxxx | A(H) | A(J) | A(K) | A(L) | M(;) | xxxx |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      | M(Z) | xxxx | xxxx | xxxx | xxxx | M(N) | M(M) | xxxx | xxxx | M(/) | xxxx |
+ * |      | M(Z) | xxxx | xxxx | xxxx | xxxx | M(N) | M(M) | M(,) | M(.) | M(/) | xxxx |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      | xxxx |     Meh     | xxxx | xxxx |      |      | xxxx |
  * `-----------------------------------------------------------------------------------'
  */
 [_NAV] = LAYOUT_planck_mit(
-  XXXXXXX, XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX, XXXXXXX,    MEH(KC_U),  MEH(KC_I),  MEH(KC_O),  MEH(KC_P),    XXXXXXX,
-  _______, MEH(KC_A), MEH(KC_S), MEH(KC_D), MEH(KC_F), XXXXXXX, LALT(KC_H), LALT(KC_J), LALT(KC_K), LALT(KC_L), MEH(KC_SCLN), XXXXXXX,
-  _______, MEH(KC_Z), XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX, MEH(KC_N),  MEH(KC_M),  XXXXXXX,    XXXXXXX,    MEH(KC_SLSH), XXXXXXX,
-  _______, _______,   _______,   _______,   XXXXXXX,          KC_MEH,       XXXXXXX,    XXXXXXX,    _______,    _______,      _______
+  XXXXXXX, XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX, XXXXXXX,    MEH(KC_U),  MEH(KC_I),     MEH(KC_O),   MEH(KC_P),    XXXXXXX,
+  _______, MEH(KC_A), MEH(KC_S), MEH(KC_D), MEH(KC_F), XXXXXXX, LALT(KC_H), LALT(KC_J), LALT(KC_K),    LALT(KC_L),  MEH(KC_SCLN), XXXXXXX,
+  _______, MEH(KC_Z), XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX, MEH(KC_N),  MEH(KC_M),  MEH(KC_COMMA), MEH(KC_DOT), MEH(KC_SLSH), XXXXXXX,
+  _______, _______,   _______,   _______,   XXXXXXX,          KC_MEH,       XXXXXXX,    XXXXXXX,       _______,     _______,      _______
 ),
 
 /* Term

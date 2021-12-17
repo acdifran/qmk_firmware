@@ -228,7 +228,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case RSFT_T(KC_ENTER):
-            return TAPPING_TERM - 50;
+            return TAPPING_TERM - 60;
         default:
             return TAPPING_TERM;
     }

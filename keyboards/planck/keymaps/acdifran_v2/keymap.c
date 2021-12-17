@@ -19,27 +19,27 @@
 
 // Left-hand home row mods
 #define HOME_A LSFT_T(KC_A)
-#define HOME_S LCTL_T(KC_S)
-#define HOME_D LALT_T(KC_D)
+#define HOME_S LALT_T(KC_S)
+#define HOME_D LCTL_T(KC_D)
 #define HOME_F LGUI_T(KC_F)
 
 // Right-hand home row mods
 #define HOME_J RGUI_T(KC_J)
-#define HOME_K LALT_T(KC_K)
-#define HOME_L RCTL_T(KC_L)
+#define HOME_K RCTL_T(KC_K)
+#define HOME_L LALT_T(KC_L)
 #define HOME_SCLN RSFT_T(KC_SCLN)
 
 // symbol level mods
 // Left-hand home row mods
 #define HOME_A_SYM LSFT_T(KC_LPRN)
-#define HOME_S_SYM LCTL_T(KC_LCBR)
-#define HOME_D_SYM LALT_T(KC_LBRC)
+#define HOME_S_SYM LALT_T(KC_LCBR)
+#define HOME_D_SYM LCTL_T(KC_LBRC)
 #define HOME_F_SYM LGUI_T(KC_PPLS)
 
 // Right-hand home row mods
 #define HOME_J_SYM RGUI_T(KC_PEQL)
-#define HOME_K_SYM LALT_T(KC_RBRC)
-#define HOME_L_SYM RCTL_T(KC_RCBR)
+#define HOME_K_SYM RCTL_T(KC_RBRC)
+#define HOME_L_SYM LALT_T(KC_RCBR)
 #define HOME_SCLN_SYM RSFT_T(KC_RPRN)
 
 enum planck_layers {

@@ -30,17 +30,118 @@
 #define HOME_SCLN RSFT_T(KC_SCLN)
 
 // symbol level mods
-// Left-hand home row mods
-#define HOME_A_SYM LSFT_T(KC_LPRN)
-#define HOME_S_SYM LALT_T(KC_LCBR)
-#define HOME_D_SYM LCTL_T(KC_LBRC)
-#define HOME_F_SYM LGUI_T(KC_PPLS)
+// Keys that are shifted, like parens, need to be handled differently
+// handling them all this way because doing it the standard way causes a delay
+// and I need to hold the layer key longer to send the symbol
+// enumerate custom macro id above keymap
+enum custom_macros {
+  HOME_A_SYM = SAFE_RANGE,
+  HOME_S_SYM,
+  HOME_D_SYM,
+  HOME_F_SYM,
+  HOME_J_SYM,
+  HOME_K_SYM,
+  HOME_L_SYM,
+  HOME_SCLN_SYM
+};
 
-// Right-hand home row mods
-#define HOME_J_SYM RGUI_T(KC_PEQL)
-#define HOME_K_SYM RCTL_T(KC_RBRC)
-#define HOME_L_SYM LALT_T(KC_RCBR)
-#define HOME_SCLN_SYM RSFT_T(KC_RPRN)
+// declare key_timer for use in macro
+uint16_t key_timer;
+// custom macro processor
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch(keycode) {
+    case HOME_A_SYM:
+      if (record->event.pressed) {
+        key_timer = timer_read();
+        register_mods(MOD_BIT(KC_LSFT));
+      } else {
+        unregister_mods(MOD_BIT(KC_LSFT));
+        if (timer_elapsed(key_timer) < TAPPING_TERM) {
+          tap_code16(S(KC_LPRN));
+        }
+      }
+      return false;
+    case HOME_S_SYM:
+      if (record->event.pressed) {
+        key_timer = timer_read();
+        register_mods(MOD_BIT(KC_LALT));
+      } else {
+        unregister_mods(MOD_BIT(KC_LALT));
+        if (timer_elapsed(key_timer) < TAPPING_TERM) {
+          tap_code16(S(KC_LCBR));
+        }
+      }
+      return false;
+    case HOME_D_SYM:
+      if (record->event.pressed) {
+        key_timer = timer_read();
+        register_mods(MOD_BIT(KC_LCTL));
+      } else {
+        unregister_mods(MOD_BIT(KC_LCTL));
+        if (timer_elapsed(key_timer) < TAPPING_TERM) {
+          tap_code(KC_LBRC);
+        }
+      }
+      return false;
+    case HOME_F_SYM:
+      if (record->event.pressed) {
+        key_timer = timer_read();
+        register_mods(MOD_BIT(KC_LGUI));
+      } else {
+        unregister_mods(MOD_BIT(KC_LGUI));
+        if (timer_elapsed(key_timer) < TAPPING_TERM) {
+          tap_code(KC_PPLS);
+        }
+      }
+      return false;
+    case HOME_J_SYM:
+      if (record->event.pressed) {
+        key_timer = timer_read();
+        register_mods(MOD_BIT(KC_LGUI));
+      } else {
+        unregister_mods(MOD_BIT(KC_LGUI));
+        if (timer_elapsed(key_timer) < TAPPING_TERM) {
+          tap_code(KC_PEQL);
+        }
+      }
+      return false;
+    case HOME_K_SYM:
+      if (record->event.pressed) {
+        key_timer = timer_read();
+        register_mods(MOD_BIT(KC_LCTL));
+      } else {
+        unregister_mods(MOD_BIT(KC_LCTL));
+        if (timer_elapsed(key_timer) < TAPPING_TERM) {
+          tap_code(KC_RBRC);
+        }
+      }
+      return false;
+    case HOME_L_SYM:
+      if (record->event.pressed) {
+        key_timer = timer_read();
+        register_mods(MOD_BIT(KC_LALT));
+      } else {
+        unregister_mods(MOD_BIT(KC_LALT));
+        if (timer_elapsed(key_timer) < TAPPING_TERM) {
+          tap_code16(S(KC_RCBR));
+        }
+      }
+      return false;
+    case HOME_SCLN_SYM:
+      if (record->event.pressed) {
+        key_timer = timer_read();
+        register_mods(MOD_BIT(KC_RSFT));
+      } else {
+        unregister_mods(MOD_BIT(KC_RSFT));
+        if (timer_elapsed(key_timer) < TAPPING_TERM) {
+          tap_code16(S(KC_RPRN));
+        }
+      }
+      return false;
+  }
+  return true;
+}
+
 
 enum planck_layers {
   _QWERTY,
